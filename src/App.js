@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Welcome from './screens/Welcome';
+import SelectInstitution from './screens/SelectInstitution';
+import Login from './screens/Login';
+import Success from './screens/Success';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // correct structure for routing?
+    <Router>
+      <Routes>
+        <Route path="/auth_portals/:id" element={<Welcome/>} />
+      </Routes>
+      <Routes>
+        <Route path="/auth_portals/:id/select_institution/" element={<SelectInstitution/>} />
+      </Routes>
+      <Routes>
+        <Route path="/auth_portals/:id/login/" element={<Login/>} />
+      </Routes>
+      <Routes>
+        <Route path="/auth_portals/:id/success/" element={<Success/>} />
+      </Routes>
+    </Router>
   );
 }
 
