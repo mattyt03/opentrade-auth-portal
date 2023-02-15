@@ -22,7 +22,7 @@ function App() {
       </Routes>
       {/* fake success route for tda */}
       <Routes>
-        <Route path="/auth_portals/success/" element={<Success/>} />
+        <Route path="/tda/success/" element={<Success/>} />
       </Routes>
     </Router>
   );
