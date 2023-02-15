@@ -20,6 +20,10 @@ function App() {
       <Routes>
         <Route path="/auth_portals/:id/success/" element={<Success/>} />
       </Routes>
+      {/* fake success route for tda */}
+      <Routes>
+        <Route path="/auth_portals/success/" element={<Success/>} />
+      </Routes>
     </Router>
   );
 }
