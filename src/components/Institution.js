@@ -6,10 +6,10 @@ const Institution = ({name, institution_link, logo, id}) => {
     let login_url = `/auth_portals/${id}/login/?institution=${name}`;
     let external_redirect = false;
     if (name == 'TD Ameritrade') {
-        login_url = 'http://localhost:8000/auth_portals/${id}/redirect_to_tda';
+        login_url = 'https://opentrade.herokuapp.com/auth_portals/${id}/redirect_to_tda';
         external_redirect = true;
     } else if (name == 'E*Trade') {
-        login_url = 'http://localhost:8000/auth_portals/${id}/redirect_to_etrade';
+        login_url = 'https://opentrade.herokuapp.com/auth_portals/${id}/redirect_to_etrade';
         external_redirect = true;
     }
 
