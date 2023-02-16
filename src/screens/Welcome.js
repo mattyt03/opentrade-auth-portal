@@ -16,7 +16,7 @@ const Welcome = () => {
             </nav>
             <div className='welcome'>
                 <div className='welcome-content'>
-                    <h1 className='welcome__h1'>This application uses <b>Opentrade</b> to connect to your trading account</h1>
+                    <h1 className='welcome__h1'>This application uses <b className="opentrade-inline">opentrade</b> to connect to your trading account</h1>
                     <div className='checklist-item'>
                         <FontAwesomeIcon className='checklist-icon' icon={faLink}/>
                         <div className='checklist-body'>
