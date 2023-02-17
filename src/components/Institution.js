@@ -11,6 +11,9 @@ const Institution = ({name, institution_link, logo, id}) => {
     } else if (name == 'E*Trade') {
         login_url = `https://opentrade.herokuapp.com/auth_portals/${id}/redirect_to_etrade`;
         external_redirect = true;
+    } else if (name == 'Coinbase') {
+        login_url = `https://opentrade.herokuapp.com/auth_portals/${id}/redirect_to_coinbase`;
+        external_redirect = true;
     }
 
     return ( 
