@@ -9,7 +9,7 @@ const Loading = () => {
     let code = searchParams.get('code');
     // code was automatically decoded, so we need to re-encode it
     code = encodeURIComponent(code);
-    console.log(code);
+    // console.log(code);
 
     fetch(`https://opentrade.herokuapp.com/auth_portals/${id}/tda_return?code=${code}`, {
         method: 'GET'
@@ -18,10 +18,10 @@ const Loading = () => {
         // console.log(res);
         return res.json();
     }).then(data => {
-        // console.log(data);
         if ('detail' in data) {
             throw Error(data['error']);
         }
+        console.log(data);
         navigate(`/auth_portals/success/`);
     });
     
