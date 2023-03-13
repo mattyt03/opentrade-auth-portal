@@ -9,7 +9,7 @@ const Success = () => {
                 {/* make the color a global variable */}
                 <Checkmark size='xLarge' color='#6772e5'/>
                 <h1 className='success__h1'>Success!</h1>
-                <p className='success-message'>Your account has been successfully linked this application.</p>
+                <p className='success-message'>Your account has been successfully linked to this application.</p>
             </div>
         </Card>
      );

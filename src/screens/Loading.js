@@ -8,6 +8,8 @@ const Loading = () => {
     const code = searchParams.get('code');
     const navigate = useNavigate();
 
+    console.log(code);
+
     fetch(`https://opentrade.herokuapp.com/auth_portals/${id}/tda_return?code=${code}`, {
         method: 'GET'
     }
