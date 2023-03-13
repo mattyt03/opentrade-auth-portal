@@ -1,18 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 :root {
-  /* --color-primary: #2584ff;
-  --color-secondary: #00d9ff;
-  --color-accent: #ff3400;
-  --color-headings: #1b0760;
-  --color-body: #918ca4;
-  --color-body-darker: #5c5577; */
   --color-primary: #6772e5;
   --color-border: #ededed;
   --text-color-primary: #333;
   --text-color-light: #777;
   --border-radius: 8px;
-
 }
 
 /* base styles */
@@ -139,7 +132,8 @@ body {
 }
 
 ::placeholder {
-  text-align: center;
+  text-align: left;
+  /* text-align: center; */
   font-size: 1rem;
   color: var(--text-color-light);
 }
@@ -208,6 +202,7 @@ body {
 
 .login__h1 {
   text-align: center;
+  /* align-self: flex-start; */
   padding: 0;
   padding-bottom: 0.5rem;
   font-size: 1.8rem;
@@ -215,9 +210,9 @@ body {
 
 .login-text {
   text-align: left;
-  align-self: flex-start;
+  /* align-self: flex-start; */
   padding: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   color: var(--text-color-light);
 }
 

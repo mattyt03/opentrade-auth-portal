@@ -16,8 +16,10 @@ const Login = () => {
     const [deviceToken, setDeviceToken] = useState('');
     const navigate = useNavigate();
     const institution_logo = institution_data[institution]['logo'];
+    const button_color = institution_data[institution]['button_color'];
 
     const handleSubmit = e => {
+        // they removed the prevent default and added a finally
         e.preventDefault();
         
         const formData = new FormData();
@@ -26,6 +28,7 @@ const Login = () => {
 
         if (displayMFAInput === false) {
             // don't hardcode urls
+            // http://127.0.0.1:8000
             fetch(`https://opentrade.herokuapp.com/auth_portals/${id}/login`, {
                 method: 'POST',
                 body: formData
@@ -50,6 +53,7 @@ const Login = () => {
         } else {
             formData.append('mfa_code', MFACode);
             formData.append('device_token', deviceToken);
+            // https://opentrade.herokuapp.com
             fetch(`https://opentrade.herokuapp.com/auth_portals/${id}/mfa`, {
                 method: 'POST',
                 body: formData
@@ -104,7 +108,7 @@ const Login = () => {
                     value={MFACode}
                     onChange={e => setMFACode(e.target.value)}
                     />}
-                <button className='button' onClick={ handleSubmit }>Submit</button>
+                <button className='button' style={{background: button_color}} onClick={ handleSubmit }>Submit</button>
                 <a href='#' class='forgot-password'>Forgot your password?</a>
             </form>
         </Card>
