@@ -7,6 +7,7 @@ import { institution_data } from '../data/institutions';
 const Login = () => {
     const { id } = useParams();
     // getting the query params takes an extra step
+    // use local storage instead?
     const [searchParams, setSearchParams] = useSearchParams();
     const institution = searchParams.get('institution');
     const [email, setEmail] = useState('');

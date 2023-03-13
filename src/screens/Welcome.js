@@ -9,6 +9,10 @@ const Welcome = () => {
     const { id } = useParams();
     const navigate = useNavigate();
 
+    // you dont need to set this every time it renders, just the first time
+    // use session storage instead?
+    localStorage.setItem('auth_portal_id', id);
+
     return ( 
         <div className='card'>
             <nav className='welcome-navbar'>
