@@ -3,11 +3,10 @@ import Card from '../components/Card';
 
 // add a loading animation
 const Loading = () => {
+    const navigate = useNavigate();
     const id = localStorage.getItem('auth_portal_id');
     const [searchParams, setSearchParams] = useSearchParams();
-    const code = searchParams.get('code');
-    const navigate = useNavigate();
-
+    let code = searchParams.get('code');
     // code was automatically decoded, so we need to re-encode it
     code = encodeURI(code);
 
