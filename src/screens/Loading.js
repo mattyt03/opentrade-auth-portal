@@ -8,7 +8,7 @@ const Loading = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     let code = searchParams.get('code');
     // code was automatically decoded, so we need to re-encode it
-    code = encodeURI(code);
+    code = encodeURIComponent(code);
     console.log(code);
 
     fetch(`https://opentrade.herokuapp.com/auth_portals/${id}/tda_return?code=${code}`, {
