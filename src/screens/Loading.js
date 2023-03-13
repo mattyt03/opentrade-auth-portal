@@ -23,6 +23,8 @@ const Loading = () => {
         }
         console.log(data);
         navigate(`/auth_portals/success/`);
+    }).catch(err => {
+        console.log(err.message);
     });
     
     return (
