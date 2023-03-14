@@ -22,10 +22,14 @@ const Institution = ({ name, institution_link, logo, id }) => {
       break;
   }
 
+  const updateInstitution = () => {
+    localStorage.setItem('auth_portal_institution', name);
+  }
+
   const InstitutionLink = externalRedirect ? 'a' : Link;
 
   return (
-    <InstitutionLink className='institution' to={loginUrl} href={loginUrl}>
+    <InstitutionLink onClick = {updateInstitution} className='institution' to={loginUrl} href={loginUrl}>
       {/* Eventually switch to svg images */}
       <img src={logo} alt='' className='institution__logo' />
       <div className='institution__body'>
